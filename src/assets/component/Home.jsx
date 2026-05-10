@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { data } from 'react-router';
 import Bannar from './bannar/Bannar';
+import Selectcard from './select/Selectcard';
 
 const Home = () => {
     const [users,setusers] =useState([]);
@@ -13,9 +13,10 @@ const Home = () => {
     return (
         <div>
             <Bannar></Bannar>
+            <Selectcard></Selectcard>
 
            <div className='max-w-10/12 mx-auto'>
-             <h1>Your Friends : {users.length}</h1>
+             <h1 className='font-semibold text-xl text-green-900'>Your Friends : {users.length}</h1>
 
 
            </div>

@@ -22,7 +22,7 @@ const Header = () => {
         {links}
       </ul>
     </div>
-   <h1 className="text-3xl font-semibold"><span className="font-bold">Keen</span>Keeper</h1>
+   <h1 className="text-green-900 text-3xl font-semibold"><span className="font-bold">Keen</span>Keeper</h1>
   </div>
   <div className="navbar-end hidden md:flex">
     <ul className="menu menu-horizontal px-1">
