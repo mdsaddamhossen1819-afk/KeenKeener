@@ -4,8 +4,8 @@ import { NavLink } from "react-router";
 const Header = () => {
     const links = (
         <>
-        <li className="text-xl"><NavLink to={''}>Home</NavLink></li>
-        <li className="text-xl"><NavLink to={''}>Timeline</NavLink></li>
+        <li className="text-xl"><NavLink to={'/'}>Home</NavLink></li>
+        <li className="text-xl"><NavLink to={'/time'}>Timeline</NavLink></li>
         <li className="text-xl"><NavLink to={''}>Stats</NavLink></li>
         </>
     )
