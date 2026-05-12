@@ -4,8 +4,8 @@ import logo2 from "../public/assets/twitter.png"
 
 const Footer = () => {
     return (
-        <div className='bg-green-900 w-full h-[400px]'>
-            <div className="max-w-10/12 mx-auto">
+        <div className='bg-green-900 w-full h-[500px]'>
+            <div className="max-w-10/12 mx-auto mt-20">
                 <h1 className="text-4xl font-bold text-white text-center pt-12">KeenKeeper</h1>
             <p className="text-center text-gray-300 pt-4">Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.</p>
             <h3 className="text-white font-semibold text-center pt-5">Social Links</h3>

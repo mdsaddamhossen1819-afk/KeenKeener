@@ -2,20 +2,24 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router'
-import Root from './Root/Root'
-import Home from './assets/component/Home'
-import Time from './assets/component/Time'
+import Root from './Root/Root';
+import Errorpage from './Errorpage'
+import Home from './assets/component/Home/Home';
+import Time from './assets/component/time/Time';
+import Stats from './assets/component/stats/Stats';
 
 
 const router = createBrowserRouter([
   {path:'/',
     Component:Root,
     children:[
-      {index:true,Component:Home},
+    {index:true,Component:Home},
+    {path:"/time",Component:Time},
+    {path:"/stats",Component:Stats},
+    
       
-      {path:'time',Component:Time},
-      
-    ]
+    ],
+    errorElement:<Errorpage></Errorpage>,
   },
   
 

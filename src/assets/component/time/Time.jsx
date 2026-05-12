@@ -1,9 +1,9 @@
-import React from 'react';
+
 
 const Time = () => {
     return (
         <div>
-            this is time
+            this is time 
         </div>
     );
 };
