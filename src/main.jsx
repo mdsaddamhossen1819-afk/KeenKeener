@@ -7,6 +7,8 @@ import Errorpage from './Errorpage'
 import Home from './assets/component/Home/Home';
 import Time from './assets/component/time/Time';
 import Stats from './assets/component/stats/Stats';
+import Homedetails from './assets/component/details/Homedetails';
+
 
 
 const router = createBrowserRouter([
@@ -16,8 +18,9 @@ const router = createBrowserRouter([
     {index:true,Component:Home},
     {path:"/time",Component:Time},
     {path:"/stats",Component:Stats},
-    
-      
+    {path:"/homedetails/:id",Component:Homedetails,
+      loader:()=>fetch('/friends.json').then(res=>res.json())
+    }
     ],
     errorElement:<Errorpage></Errorpage>,
   },

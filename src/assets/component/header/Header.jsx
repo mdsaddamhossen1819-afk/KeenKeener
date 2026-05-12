@@ -4,9 +4,21 @@ import { NavLink } from "react-router";
 const Header = () => {
     const links = (
         <>
-        <li className="text-xl text-green-900"><NavLink to={'/'}>Home</NavLink></li>
-        <li className="text-xl text-green-900"><NavLink to={'/time'}>Timeline</NavLink></li>
-        <li className="text-xl text-green-900"><NavLink to={'/stats'}>Stats</NavLink></li>
+        <li className="text-2xl"><NavLink to={'/'}   
+        className={({ isActive }) =>
+          isActive ? "text-green-500 font-bold" : ""
+        }>Home</NavLink></li>
+        <li className="text-2xl"><NavLink to={'/time'}
+          className={({ isActive }) =>
+          isActive ? "text-green-500 font-bold" : ""
+        }
+        >Timeline</NavLink>
+        </li>
+        <li className="text-2xl"><NavLink to={'/stats'}
+          className={({ isActive }) =>
+          isActive ? "text-green-500 font-bold" : ""
+        }
+        >Stats</NavLink></li>
         </>
     )
     return (
