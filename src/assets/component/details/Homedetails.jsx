@@ -1,10 +1,13 @@
 
+import { useContext } from 'react';
 import { useLoaderData, useParams } from 'react-router';
+import { DataContext } from '../context/FriendContext';
 
 const Homedetails = () => {
+  const {handlecall,handletext,handlevideo}= useContext(DataContext)
     const {id} = useParams();
     const data =useLoaderData();
-    const friend = data.find(h=>h.id == id)
+    const friend = data.find(h=>h.id == id);
     return (
        <div className="max-w-10/12 mx-auto p-5 bg-gray-50 rounded-xl font-sans text-slate-700 mt-10">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
@@ -24,7 +27,7 @@ const Homedetails = () => {
           <p className="text-sm italic text-gray-500 mt-2">"{friend.bio}"</p>
           <p className="text-[10px] text-gray-400 mt-1">Preferred: {friend.email}</p>
           
-          {/* Action Buttons */}
+      
           <div className="w-full mt-6 space-y-2">
             <button className="w-full flex items-center justify-center gap-2 py-2 shadow-2xl">
                Snooze 2 Weeks
@@ -72,15 +75,15 @@ const Homedetails = () => {
           <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
             <h3 className="text-sm font-semibold text-slate-700 mb-4">Quick Check-In</h3>
             <div className="grid grid-cols-3 gap-4">
-              <button className="flex flex-col items-center justify-center p-4 bg-gray-50 rounded-xl">
+              <button onClick={handlecall} className="flex flex-col items-center justify-center p-4 bg-gray-50 rounded-xl">
             
                 <span className="text-sm font-medium">Call</span>
               </button>
-              <button className="flex flex-col items-center justify-center p-4 bg-gray-50 rounded-xl">
+              <button onClick={handletext} className="flex flex-col items-center justify-center p-4 bg-gray-50 rounded-xl">
                 
                 <span className="text-sm font-medium">Text</span>
               </button>
-              <button className="flex flex-col items-center justify-center p-4 bg-gray-50 rounded-xl ">
+              <button onClick={handlevideo} className="flex flex-col items-center justify-center p-4 bg-gray-50 rounded-xl ">
                 
                 <span className="text-sm font-medium">Video</span>
               </button>

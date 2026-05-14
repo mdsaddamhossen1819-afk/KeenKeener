@@ -1,12 +1,17 @@
+import { useContext } from "react";
+import { DataContext } from "../context/FriendContext";
 
 
 const Time = () => {
+  const {call,text,video}=useContext(DataContext);
+  const today = new Date().toLocaleDateString();
+
     return (
         <div className="max-w-10/12 mx-auto mt-10">
             <h1 className="text-3xl font-semibold text-green-900">TimeLine</h1>
             <div className="dropdown mb-72 ">
   <div tabIndex={0} role="button" className="btn m-1">
-    Theme
+    Filter timline
     <svg
       width="10px"
       height="12px"
@@ -42,8 +47,35 @@ const Time = () => {
         value="" />
     </li>
     
-  </ul>
-</div>
+   </ul>
+  </div>
+  <div className="flex gap-3">
+    <div>
+      <img src="" alt="" />
+    </div>
+    <div>
+      <h1>Meetup with <span>{call.name}</span></h1>
+      <p>${today}</p>
+    </div>
+  </div>
+  <div className="flex gap-3">
+    <div>
+      <img src="" alt="" />
+    </div>
+    <div>
+      <h1>Video with <span>{video.name}</span></h1>
+      <p>${today}</p>
+    </div>
+  </div>
+  <div className="flex gap-3">
+    <div>
+      <img src="" alt="" />
+    </div>
+    <div>
+      <h1>Text with <span>{text.name}</span></h1>
+      <p>${today}</p>
+    </div>
+  </div>
 
         </div>
     );

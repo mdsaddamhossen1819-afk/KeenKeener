@@ -4,19 +4,19 @@ import { NavLink } from "react-router";
 const Header = () => {
     const links = (
         <>
-        <li className="text-2xl"><NavLink to={'/'}   
+        <li className="text-xl"><NavLink to={'/'}   
         className={({ isActive }) =>
-          isActive ? "text-green-500 font-bold" : ""
+          isActive ? "text-white font-semibold bg-green-800 border border-green-800" : ""
         }>Home</NavLink></li>
-        <li className="text-2xl"><NavLink to={'/time'}
+        <li className="text-xl"><NavLink to={'/time'}
           className={({ isActive }) =>
-          isActive ? "text-green-500 font-bold" : ""
+          isActive ? "text-white font-semibold bg-green-800 border border-green-800" : ""
         }
         >Timeline</NavLink>
         </li>
-        <li className="text-2xl"><NavLink to={'/stats'}
+        <li className="text-xl"><NavLink to={'/stats'}
           className={({ isActive }) =>
-          isActive ? "text-green-500 font-bold" : ""
+          isActive ? "text-white font-semibold bg-green-800 border border-green-800" : ""
         }
         >Stats</NavLink></li>
         </>
@@ -37,7 +37,7 @@ const Header = () => {
    <h1 className="text-green-900 text-3xl font-semibold"><span className="font-bold">Keen</span>Keeper</h1>
   </div>
   <div className="navbar-end hidden md:flex">
-    <ul className="menu menu-horizontal px-1">
+    <ul className="menu menu-horizontal px-1 gap-10">
       {links}
     </ul>
   </div>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { data, Link, } from "react-router";
+import {  Link, } from "react-router";
 import Bannar from "../bannar/Bannar";
 import Selectcard from "../select/Selectcard";
 
@@ -36,23 +36,22 @@ const Home = () => {
                </div>
 
       
-               <h3 className="text-gray-800 font-bold           text-lg mb-1 leading-tight">
+               <h3 className="text-gray-800 font-bold text-lg mb-3">
                  {friend.name}
                </h3>
-               <p className="text-gray-500">62d ago</p>
+               <p className="text-gray-500 mb-2">62d ago</p>
 
                {
                  friend.tags.find(tag=>(
-                     {tag}
+                    <h1>{tag}</h1>
                  ))
                }
 
       
-              <div className="flex flex-col gap-2 w-full         items-center">
-                <span className="px-4 py-1 bg-green-100         text-green-600 text-[10px] font-bold         rounded-full">
-                  {friend.status}
-                </span>
-       
+              <div className="flex flex-col w-full items-center my-3">
+                <button className={`status-btn ${friend.status === 'active' ? 'bg-green-600 text-white rounded-xl py-1 px-4' : 'bg-red-600 text-white rounded-xl py-1 px-4'}`}>
+                 {friend.status}
+               </button>
                 </div>
                 </div>
                    </Link>
