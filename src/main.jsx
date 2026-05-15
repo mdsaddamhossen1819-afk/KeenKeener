@@ -9,7 +9,8 @@ import Time from './assets/component/time/Time';
 import Stats from './assets/component/stats/Stats';
 import Homedetails from './assets/component/details/Homedetails';
 import FriendContext from './assets/component/context/FriendContext';
- import { ToastContainer, toast } from 'react-toastify';
+
+
 
 
 
@@ -34,11 +35,6 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-
-  <FriendContext>
-   <RouterProvider router={router}></RouterProvider>
-  </FriendContext>
-    <ToastContainer />
-
+      <RouterProvider router={router}></RouterProvider>
   </StrictMode>,
 )

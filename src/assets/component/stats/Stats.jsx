@@ -3,7 +3,7 @@
 const Stats = () => {
     return (
         <div>
-            this is stas
+            this is stats
         </div>
     );
 };

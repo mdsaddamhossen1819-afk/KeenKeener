@@ -1,10 +1,7 @@
 
-import { useContext } from 'react';
 import { useLoaderData, useParams } from 'react-router';
-import { DataContext } from '../context/FriendContext';
 
 const Homedetails = () => {
-  const {handlecall,handletext,handlevideo}= useContext(DataContext)
     const {id} = useParams();
     const data =useLoaderData();
     const friend = data.find(h=>h.id == id);
@@ -75,15 +72,15 @@ const Homedetails = () => {
           <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
             <h3 className="text-sm font-semibold text-slate-700 mb-4">Quick Check-In</h3>
             <div className="grid grid-cols-3 gap-4">
-              <button onClick={handlecall} className="flex flex-col items-center justify-center p-4 bg-gray-50 rounded-xl">
+              <button className="flex flex-col items-center justify-center p-4 bg-gray-50 rounded-xl">
             
                 <span className="text-sm font-medium">Call</span>
               </button>
-              <button onClick={handletext} className="flex flex-col items-center justify-center p-4 bg-gray-50 rounded-xl">
+              <button className="flex flex-col items-center justify-center p-4 bg-gray-50 rounded-xl">
                 
                 <span className="text-sm font-medium">Text</span>
               </button>
-              <button onClick={handlevideo} className="flex flex-col items-center justify-center p-4 bg-gray-50 rounded-xl ">
+              <button className="flex flex-col items-center justify-center p-4 bg-gray-50 rounded-xl ">
                 
                 <span className="text-sm font-medium">Video</span>
               </button>
