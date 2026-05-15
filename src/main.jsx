@@ -8,7 +8,6 @@ import Home from './assets/component/Home/Home';
 import Time from './assets/component/time/Time';
 import Stats from './assets/component/stats/Stats';
 import Homedetails from './assets/component/details/Homedetails';
-import FriendContext from './assets/component/context/FriendContext';
 
 
 
